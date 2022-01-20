@@ -4,27 +4,35 @@
 
 - [Overview](#overview)
 
-  - [Project Goal](#project-goal)
+  - [V1 Links](#v1-links)
+
+  - [V2Project Goal](#project-goal)
   - [Reasons for choosing this project](#reasons-for-choosing-this-project)
   - [MVP](#build-features)
   - [Version 2 New Editions](#v2-new-editions)
   - [Technologies Used](#technologies-used)
   - [What I Am Proud Of](#what-i-am-proud-of)
   - [Continued development](#continued-development)
+  - [Data Model](#data-model)
 
 - [Author](#author)
 
 ## Overview
 
+### V1 Links:
+
+- Solution URL: [Github](https://github.com/MSPayneII/foundations-capstone)
+- Live Site URL: [Heroku](https://mpayne-foundation-capstone.herokuapp.com/)
+
 ### Project Goal:
 
-Improve upon version 1 of the 8-Ball Fortune Teller application (built with vanilla JavaScript) and showcase the knowledge gained in my React Specialization.
+Improve upon version 1 of the 8-Ball Fortune Teller application (my Foundation Capstone built with vanilla JavaScript) and showcase the knowledge gained in my React Specialization.
 
 ### Reasons for choosing this project:
 
-- Taking an existing application and rebuild it using React
-- Add new features making it a CRUD application
-- Build a CRUD application and connect it to a relational Database
+- Take an existing application built with vanillaJS and rebuild it using React
+- Praticing building a CRUD application in React
+- Connect the application to a relational Database
 
 ### MVP:
 
@@ -34,21 +42,25 @@ Improve upon version 1 of the 8-Ball Fortune Teller application (built with vani
 - Question and answers pairs are displayed in a user's record (maybe a dashboard format)
 - Users can clear records collectively or individually depending on their preference
 - Users can update their profile with an avatar photo
-- Users can receive horoscope information for various signs. This feature will use a horoscope API
+- Users can receive horoscope information for various signs in daily, weekly, monthly format. This feature will use a horoscope API
 - Users can delete their account
 
 ### Technologies Used:
 
 - React
+  - React router dom
+  - functional components
+  - react hooks: useState, useEffect, useContext, maybe useReducer
 - Axios
 - Node/Express
-- Material UI
+- Material UI (might build the CSS myself)
 - PostgresSQL
 
 ### V2 New Editions
 
+- Responsive design (mobile, tablet, desktop)
 - Horoscope Information via API data
-- Pages
+- Separate Pages
   - Landing
   - User login/register (user authentication included)
   - User question/ eightball display
@@ -65,7 +77,11 @@ Improve upon version 1 of the 8-Ball Fortune Teller application (built with vani
   - useState, useEffect, useContext, maybe useReducer
 - React propTypes
 
-## Author
+### Data Model
+
+![screenshot](screenshot.png)
+
+### Author
 
 👤 **Michael Payne**
 
