@@ -52,7 +52,7 @@ Improve upon version 1 of the 8-Ball Fortune Teller application (my Foundation C
   - React hooks: useState, useEffect, useContext, maybe useReducer
 - Axios
 - Node/Express
-- Material UI (might build the CSS myself)
+- Material UI (might build 100% of the CSS myself because I'm about that life)
 - PostgresSQL
 
 ### V2 New Editions
