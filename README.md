@@ -30,7 +30,7 @@ Improve upon version 1 of the 8-Ball Fortune Teller application (my Foundation C
 ### Reasons for choosing this project:
 
 - Take an existing application built with vanillaJS and rebuild it using React
-- Praticing building a CRUD application in React
+- Practice building a CRUD application in React
 - Connect the application to a relational Database
 
 ### MVP:
@@ -48,8 +48,8 @@ Improve upon version 1 of the 8-Ball Fortune Teller application (my Foundation C
 
 - React
   - React router dom
-  - functional components
-  - react hooks: useState, useEffect, useContext, maybe useReducer
+  - Functional components
+  - React hooks: useState, useEffect, useContext, maybe useReducer
 - Axios
 - Node/Express
 - Material UI (might build the CSS myself)
