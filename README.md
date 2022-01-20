@@ -1,4 +1,4 @@
-<h1 align="center">8-Ball Fortune Teller V2 👋</h1>
+<h1 align="center">React Specialization Capstone: 8-Ball Fortune Teller V2</h1>
 
 ## Table of contents
 
