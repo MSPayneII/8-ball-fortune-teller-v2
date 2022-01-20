@@ -5,7 +5,6 @@
 - [Overview](#overview)
 
   - [V1 Links](#v1-links)
-
   - [V2Project Goal](#project-goal)
   - [Reasons for choosing this project](#reasons-for-choosing-this-project)
   - [MVP](#build-features)
