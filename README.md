@@ -1,17 +1,14 @@
 <h1 align="center">8-Ball Fortune Teller V2 👋</h1>
 
-
 ## Table of contents
 
 - [Overview](#overview)
+
   - [Project Goal](#project-goal)
   - [Reasons for choosing this project](#reasons-for-choosing-this-project)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My Process](#my-process)
-
+  - [MVP](#build-features)
+  - [Version 2 New Editions](#v2-new-editions)
   - [Technologies Used](#technologies-used)
-  - [Build Features](#build-features)
   - [What I Am Proud Of](#what-i-am-proud-of)
   - [Continued development](#continued-development)
 
@@ -21,53 +18,52 @@
 
 ### Project Goal:
 
-Build a digital experience that rivals the experience of playing with the real Magic Eightball, currently produced by Mattel.
+Improve upon version 1 of the 8-Ball Fortune Teller application (built with vanilla JavaScript) and showcase the knowledge gained in my React Specialization.
 
 ### Reasons for choosing this project:
 
-- Practicality
-- Creative way to build a CRD (no U) application
-- Chance to learn by doing
+- Taking an existing application and rebuild it using React
+- Add new features making it a CRUD application
+- Build a CRUD application and connect it to a relational Database
 
-### Screenshot
+### MVP:
 
-![Screenshot](client/images/eightballgif.gif)
-
-### Links
-
-- Solution URL: [Github](https://github.com/MSPayneII/foundations-capstone)
-- Live Site URL: [Heroku](https://mpayne-foundation-capstone.herokuapp.com/)
-
-## My Process
+- Users can login/create an account
+- Users can ask the eightball questions
+- Users receive a randomly generated answer on the eightball
+- Question and answers pairs are displayed in a user's record (maybe a dashboard format)
+- Users can clear records collectively or individually depending on their preference
+- Users can update their profile with an avatar photo
+- Users can receive horoscope information for various signs. This feature will use a horoscope API
+- Users can delete their account
 
 ### Technologies Used:
 
+- React
 - Axios
-- Express
-- Javascript
-- HTML
-- CSS
+- Node/Express
+- Material UI
+- PostgresSQL
 
-## Build Features:
+### V2 New Editions
 
-- Users can enter questions to ask the eight ball
-- Users will receive a randomized answer to their question via an animation displayed on the eight ball
-- Q&As will save and display on screen for users
-- Saved Q&As are erased by refreshing the browser
-
-## What I am proud of:
-
-- Figuring out a way to combine async and synchronous code and time it so all aspects of the eightball animation flow together
-
-### Continued development
-
-- Build 8-Ball Fortune Teller version 2 in React, using functional components and React Hooks
-
-- Add form validation with visual cues for the user
-
-- Update css variable naming convention
-
-- Add side navigation bar with links to eightball display and saved responses. They will be on separate pages but will display on the main landing page
+- Horoscope Information via API data
+- Pages
+  - Landing
+  - User login/register (user authentication included)
+  - User question/ eightball display
+  - Horoscope display page that pulls in horoscope API data based on the user's birth sign or user input
+  - User profile with dashboard
+- Better page navigation
+- Sidebar with links and displays various pages
+  - Purpose: reduce unnecessary scrolling
+- Database Connection
+  - PostgresSQL
+- Backend
+  - Node/express
+- React Hooks
+  - useState, useEffect, useContext, maybe useReducer
+- React propTypes
 
 ## Author
 
