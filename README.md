@@ -44,22 +44,11 @@ Improve upon version 1 of the 8-Ball Fortune Teller application (my Foundation C
 - Users can receive horoscope information for various signs in daily, weekly, monthly format. This feature will use a horoscope API
 - Users can delete their account
 
-### Technologies Used:
-
-- React
-  - React router dom
-  - Functional components
-  - React hooks: useState, useEffect, useContext, maybe useReducer
-- Axios
-- Node/Express
-- Material UI (might build 100% of the CSS myself because I'm about that life)
-- PostgresSQL
-
 ### V2 New Editions
 
 - Responsive design (mobile, tablet, desktop)
 - Horoscope Information via API data
-- Separate Pages
+- Separate Pages (w/react router dom)
   - Landing
   - User login/register (user authentication included)
   - User question/ eightball display
