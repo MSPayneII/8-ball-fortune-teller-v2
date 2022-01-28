@@ -1,0 +1,42 @@
+.registration-container {
+  display: flex;
+  align-items: center;
+}
+
+.registration-form {
+  max-width: 28.125rem;
+  border-top: 0.3125rem solid var(--primary-regular);
+}
+
+.registration-title {
+  text-align: center;
+}
+
+.register-logo {
+  display: block;
+  margin: 0 auto;
+  width: 17rem;
+  height: 5rem;
+  margin-bottom: 2rem;
+}
+
+.registration-text {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.registration-btn {
+  margin-top: 1rem;
+  height: 2.1875rem;
+  /* font-size: 1.2rem; */
+  /* font-weight: var(--medium); */
+}
+
+.member-btn {
+  background: transparent;
+  border: none;
+  font-weight: var(--semiBold);
+  color: var(--primary-regular);
+  letter-spacing: 0.0625rem;
+  cursor: pointer;
+}

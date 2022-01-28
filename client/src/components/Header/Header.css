@@ -1,0 +1,89 @@
+.main-display-head {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--white);
+  height: var(--nav-height);
+  box-shadow: var(--shadow-1);
+  position: relative;
+}
+
+.main-display-logo-large {
+  display: none;
+}
+.main-display-logo-mobile {
+  width: 3rem;
+}
+
+.main-display-title {
+  display: none;
+}
+
+.toggle-btn {
+  display: inline-block;
+  font-size: 2.6rem;
+  color: var(--primary-regular);
+  transition: var(--transition);
+  background: transparent;
+  border-color: transparent;
+  cursor: pointer;
+  padding-top: 0.4rem;
+}
+
+.toggle-btn:hover {
+  color: var(--primary-dark);
+}
+
+.profile-btn,
+.logout-btn {
+  height: 2.2rem;
+}
+
+.profile-btn {
+  display: flex;
+  align-items: center;
+}
+
+.logout-btn {
+  display: inline-block;
+  position: absolute;
+  margin-top: 1rem;
+  width: 7rem;
+  border: 1px solid var(--primary-light);
+  background-color: var(--white);
+  color: var(--blue-dark);
+  z-index: 2;
+}
+
+.logout-btn:hover {
+  background-color: var(--red-dark);
+  color: var(--white);
+  border: none;
+}
+
+.hide-logout-btn {
+  display: none;
+}
+.small-icon {
+  font-size: 1rem;
+  margin-left: 0.5rem;
+}
+
+@media (min-width: 62rem) {
+  .toggle-btn {
+    display: none;
+  }
+  .main-display-title {
+    display: inline-block;
+    font-size: var(--head2Font);
+  }
+
+  .main-display-logo-large {
+    display: inline-block;
+    width: 12rem;
+  }
+
+  .main-display-logo-mobile {
+    display: none;
+  }
+}
