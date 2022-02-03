@@ -39,7 +39,7 @@ Improve upon version 1 of the 8-Ball Fortune Teller application (my Foundation C
 
 ### MVP:
 
-- Users can login/create an account
+- Users can login/create an account with authentication
 - Users can ask the eightball questions
 - Users receive a randomly generated answer on the eightball
 - Question and answers pairs are displayed in a user's record
