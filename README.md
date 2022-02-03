@@ -29,7 +29,7 @@ Improve upon version 1 of the 8-Ball Fortune Teller application (my Foundation C
 
 - Take an existing application built with vanillaJS and rebuild it using React
 - Practice building a CRUD application in React
-- Connect the application to a relational Database
+- Connect the application to a Database
 
 ### MVP:
 
