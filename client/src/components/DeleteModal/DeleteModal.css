@@ -39,7 +39,7 @@ span {
 
 .delete-modal-title {
   color: var(--red-dark);
-  margin-bottom: 5rem;
+  margin-bottom: 1rem;
 }
 
 .delete-modal-text {

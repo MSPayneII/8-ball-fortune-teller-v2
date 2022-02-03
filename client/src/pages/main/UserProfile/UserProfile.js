@@ -5,8 +5,14 @@ import { FormInput, Alert } from "../../../components";
 import "./UserProfile.css";
 
 const UserProfile = () => {
-  const { user, updateUser, showAlert, displayAlert, isLoading } =
-    useGlobalContext();
+  const {
+    user,
+    updateUser,
+    showAlert,
+    displayAlert,
+    isLoading,
+    toggleDeleteModal,
+  } = useGlobalContext();
 
   const initialProfileState = {
     name: user ? user.name : null,
@@ -68,13 +74,12 @@ const UserProfile = () => {
           </button>
         </div>
       </form>
-      {/* <button
+      <button
         className="btn user-delete-btn logout-delete-account-btn-colors"
         onClick={toggleDeleteModal}
-        disabled
       >
         Delete Account
-      </button> */}
+      </button>
       <DeleteModal />
     </main>
   );
