@@ -123,6 +123,12 @@ const reducer = (state, action) => {
       qAndAPairings: action.payload,
     };
   }
+  if (action.type === "RESET_PAIRS") {
+    return {
+      ...state,
+      qAndAPairings: [],
+    };
+  }
   throw new Error(`no such action: ${action.type}`);
 };
 
