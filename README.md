@@ -4,7 +4,8 @@
 
 - [Overview](#overview)
 
-  - [V1 Links](#v1-links)
+  - [V1 Links](#original-v1-links)
+  - [V2 Links](#v2-links)
   - [Project Goal](#project-goal)
   - [Reasons for choosing this project](#reasons-for-choosing-this-project)
   - [MVP](#build-features)
@@ -16,10 +17,15 @@
 
 ## Overview
 
-### V1 Links:
+### Original V1 Links:
 
 - Solution URL: [Github](https://github.com/MSPayneII/foundations-capstone)
 - Live Site URL: [Heroku](https://mpayne-foundation-capstone.herokuapp.com/)
+
+### V2 Links:
+
+- Solution URL: [Github](https://github.com/MSPayneII/8-ball-fortune-teller-v2)
+- Live Site URL: Not deployed yet.
 
 ### Project Goal:
 
