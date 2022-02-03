@@ -1,10 +1,10 @@
-.main-display-head {
+.main-display-header {
   display: flex;
   justify-content: space-around;
   align-items: center;
   background-color: var(--white);
   height: var(--nav-height);
-  box-shadow: var(--shadow-1);
+  box-shadow: var(--shadow-header);
   position: relative;
 }
 
@@ -13,10 +13,6 @@
 }
 .main-display-logo-mobile {
   width: 3rem;
-}
-
-.main-display-title {
-  display: none;
 }
 
 .toggle-btn {
@@ -34,6 +30,10 @@
   color: var(--primary-dark);
 }
 
+.main-display-title {
+  display: none;
+}
+
 .profile-btn,
 .logout-btn {
   height: 2.2rem;
@@ -48,17 +48,8 @@
   display: inline-block;
   position: absolute;
   margin-top: 1rem;
-  width: 7rem;
-  border: 1px solid var(--primary-light);
-  background-color: var(--white);
-  color: var(--blue-dark);
+  width: 7.3rem;
   z-index: 2;
-}
-
-.logout-btn:hover {
-  background-color: var(--red-dark);
-  color: var(--white);
-  border: none;
 }
 
 .hide-logout-btn {
@@ -85,5 +76,13 @@
 
   .main-display-logo-mobile {
     display: none;
+  }
+
+  .main-display-title {
+    margin-left: 11rem;
+  }
+  .logout-btn,
+  .profile-btn {
+    margin-left: 14rem;
   }
 }

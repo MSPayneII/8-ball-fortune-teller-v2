@@ -3,12 +3,14 @@ import cors from "cors";
 import dotenv from "dotenv";
 import "express-async-errors";
 import mongoose from "mongoose";
+import EBAnswers from "./models/EBAnswers.js";
 
 dotenv.config(); //looks for dotenv in the root
 const app = express();
 
 // routers
 import authRouter from "./routes/authRoutes.js";
+import answerRouter from "./routes/answerRoutes.js";
 
 // Middleware
 import errorHandlerMiddleware from "./middleware/error-handler.js";
@@ -21,6 +23,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/auth", authRouter);
+app.use("/api/answer", answerRouter);
 
 // Looks for the errors that happen in the existing route
 app.use(errorHandlerMiddleware);

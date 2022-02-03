@@ -1,0 +1,99 @@
+/* border with round corners */
+table {
+  border-top: 0.3125rem solid var(--primary-regular);
+  border-radius: 0.25rem;
+  border-collapse: separate;
+  border-spacing: 0;
+  min-width: 50vw;
+  max-width: var(--fluid-width);
+  margin: 3rem auto;
+  transition: var(--transition);
+  box-shadow: var(--shadow-1);
+}
+
+table:hover {
+  box-shadow: var(--shadow-2);
+}
+
+/* rounds the border of each corner cell  */
+thead tr th:first-child {
+  border-top-left-radius: 0.25rem;
+} /*top left*/
+thead tr th:last-child {
+  border-top-right-radius: 0.25rem;
+} /*top right*/
+tbody tr:last-child th:first-child {
+  border-bottom-left-radius: 0.25rem;
+} /*bottom left*/
+tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 0.25rem;
+} /*bottom right*/
+
+thead .colhead {
+  background-color: var(--white);
+  font-size: var(--head3Font);
+  padding: 0.625rem;
+  color: var(--blue-dark);
+  text-align: center;
+  text-transform: capitalize;
+}
+
+tbody .rowhead,
+tbody tr td {
+  text-align: center;
+  border-top: 0.0625rem solid var(--grey-dark);
+  padding: 1rem;
+}
+
+tr {
+  transition: var(--transition);
+}
+
+/* even numbered rows have grey background, odd numbered rows have transparent background */
+tr:nth-child(even) {
+  background-color: var(---grey-light);
+}
+tr:nth-child(odd) {
+  background-color: var(--white);
+}
+
+/* changes background color of a row when hovered over */
+tr:hover {
+  background-color: var(--primary-light);
+}
+
+th {
+  font-weight: var(--medium);
+}
+
+.empty-table {
+  max-width: 25rem;
+  min-height: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem auto;
+  background: var(--white);
+  border-radius: var(--borderRadius);
+  border-top: 0.3125rem solid var(--primary-regular);
+  box-shadow: var(--shadow-1);
+}
+
+.empty-table h1 {
+  font-size: var(--head2Font);
+  text-align: center;
+}
+
+.empty-table-span {
+  color: var(--red-dark);
+}
+
+.empty-table:hover {
+  box-shadow: var(--shadow-2);
+}
+
+@media (min-width: 62rem) {
+  .empty-table {
+    max-width: 40rem;
+  }
+}

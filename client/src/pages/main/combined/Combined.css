@@ -1,0 +1,26 @@
+.combined {
+  display: flex;
+  flex-direction: row;
+}
+
+.combined-layout {
+  display: flex;
+  width: 100vw;
+  margin: 0 auto;
+}
+
+.individual-page {
+  width: 100vw;
+  margin: 0 auto;
+}
+
+@media (min-width: 62rem) {
+  .combined-layout {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .individual-page {
+    width: 90%;
+  }
+}

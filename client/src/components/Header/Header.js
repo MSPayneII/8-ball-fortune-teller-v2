@@ -5,20 +5,24 @@ import { FiMenu } from "react-icons/fi";
 import { Logo } from "../../components";
 import mobileLogo from "../../assets/images/mobile-logo.svg";
 import { links } from "../../utils/mainLinks";
+import { MobileNav } from "../../components";
 
 import "./Header.css";
 
 const Header = ({ userName }) => {
-  const { user, logOutUser } = useGlobalContext();
+  const { user, logOutUser, toggleMobileNav } = useGlobalContext();
 
   const [showLogoutBtn, setShowLogoutBtn] = useState(false);
 
   return (
-    <header className="main-display-head">
-      <Logo className="main-display-logo-large" />
-      <button className="toggle-btn">
+    <header className="main-display-header">
+      {/* <Logo className="main-display-logo-large" /> */}
+      <button className="toggle-btn" onClick={toggleMobileNav}>
         <FiMenu />
       </button>
+
+      <MobileNav />
+
       <img
         src={mobileLogo}
         className="main-display-logo-mobile"
@@ -36,9 +40,11 @@ const Header = ({ userName }) => {
         </button>
         <button
           className={`${
-            showLogoutBtn ? "btn logout-btn" : "btn hide-logout-btn"
+            showLogoutBtn
+              ? "btn logout-btn logout-delete-account-btn-colors"
+              : "btn hide-logout-btn"
           }`}
-          onClick={() => logOutUser()}
+          onClick={logOutUser}
         >
           Logout
         </button>

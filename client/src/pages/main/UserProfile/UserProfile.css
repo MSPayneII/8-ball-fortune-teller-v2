@@ -1,0 +1,51 @@
+.profile-form {
+  max-width: 85vw;
+  border-top: 0.3125rem solid var(--primary-regular);
+  box-shadow: var(--shadow-1);
+}
+
+.profile-form-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 0.5rem;
+}
+
+.profile-form:hover {
+  box-shadow: var(--shadow-2);
+}
+
+.save-changes-btn {
+  height: 2.1875rem;
+  margin-top: 1rem;
+  margin-bottom: 5rem;
+}
+
+.user-delete-btn {
+  margin-top: 1rem;
+  height: 2.1875rem;
+  width: 13rem;
+  box-shadow: none;
+}
+
+/* .profile-main {
+  display: flex;
+  flex-direction: column;
+} */
+
+@media (min-width: 62rem) {
+  .profile-form {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3rem;
+    max-width: 70vw;
+  }
+
+  .profile-form-container {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3rem;
+  }
+
+  .save-changes-btn {
+    width: 20rem;
+    margin-bottom: 0rem;
+  }
+}

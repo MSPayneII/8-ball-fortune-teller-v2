@@ -17,7 +17,6 @@ const register = async (req, res) => {
   res.status(201).json({
     user: {
       name: user.name,
-      email: user.email,
       homeTown: user.homeTown,
       currentLocation: user.currentLocation,
       zodiacSign: user.zodiacSign,
@@ -37,28 +36,58 @@ const login = async (req, res) => {
     throw new Error("No user with this email");
   }
 
-  // console.log(user);
   const isPasswordCorrect = await user.checkPassword(password);
   if (!isPasswordCorrect) {
-    throw new Error("No user with this email");
+    throw new Error("Email or password is not correct");
   }
   const token = user.createJsonWebToken();
 
   res.status(200).json({
     user: {
       name: user.name,
-      email: user.email,
-      _id: user._id,
       homeTown: user.homeTown,
       currentLocation: user.currentLocation,
       zodiacSign: user.zodiacSign,
     },
     token,
   });
-  res.send("login user");
+  // res.send("login user");
 };
-const updateUser = (req, res) => {
-  res.send("update user");
+const updateUser = async (req, res) => {
+  const { name, homeTown, currentLocation, zodiacSign } = req.body;
+
+  // console.log(req.user); //confirm I have access to user
+  // console.log(req.user.userId); //confirm I have access to user id
+
+  if (!name || !homeTown || !currentLocation || !zodiacSign) {
+    throw new Error("Please provide all values");
+  }
+  const user = await User.findOne({ _id: req.user.userId });
+
+  user.name = name;
+  user.homeTown = homeTown;
+  user.currentLocation = currentLocation;
+  user.zodiacSign = zodiacSign;
+
+  await user.save();
+  // // // console.log(user);
+
+  const token = user.createJsonWebToken();
+
+  res.status(200).json({
+    user,
+    token,
+  });
 };
 
-export { register, login, updateUser };
+const deleteUser = async (req, res) => {
+  const user = await User.deleteOne({ _id: req.user.userId });
+  // console.log(user.name);
+  // console.log(user);
+  console.log(user);
+  // const token = user.createJsonWebToken();
+
+  res.status(200).json({ msg: "User Deleted" });
+};
+
+export { register, login, updateUser, deleteUser };

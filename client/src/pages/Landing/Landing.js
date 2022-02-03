@@ -19,9 +19,9 @@ const Landing = () => {
           <h1>Want to know your fortune?</h1>
 
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio
-            atque consequatur hic est nam aspernatur dolor magni iste suscipit
-            molestias?
+            Login/register for an account and ask the 8-Ball Fortune Teller a
+            yes or no question. Concentrate on your question and see what your
+            future holds.
           </p>
           <Link to="/register" className="btn btn-hero">
             Login/Register

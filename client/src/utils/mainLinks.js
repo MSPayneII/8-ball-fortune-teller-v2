@@ -1,24 +1,24 @@
-import { CgProfile } from "react-icons/cg";
+import { BsPerson } from "react-icons/bs";
 import { GiEightBall } from "react-icons/gi";
-import { MdOutlineNotes } from "react-icons/md";
+import { BsListTask } from "react-icons/bs";
 
 export const links = [
   {
     id: 1,
     text: "Ask Eightball",
-    path: "",
+    path: "/",
     icon: <GiEightBall />,
   },
   {
     id: 2,
     text: "Saved Responses",
-    path: "",
-    icon: <MdOutlineNotes />,
+    path: "responses",
+    icon: <BsListTask />,
   },
   {
     id: 3,
     text: "Update Profile",
-    path: "",
-    icon: <CgProfile />,
+    path: "profile",
+    icon: <BsPerson />,
   },
 ];

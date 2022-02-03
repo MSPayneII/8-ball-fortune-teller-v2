@@ -1,0 +1,33 @@
+.link {
+  list-style-type: none;
+  font-family: var(--headingType);
+}
+
+.largeScreenMargin {
+  margin-left: -2rem;
+}
+
+.links a {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  text-decoration: none;
+  padding: 1rem 1.5rem;
+  color: var(--blue-dark);
+  transition: var(--transition);
+  letter-spacing: 0.062rem;
+}
+
+.links a:hover {
+  color: var(--primary-regular);
+}
+.links a svg {
+  font-size: 1.8rem;
+  color: var(--blue-dark);
+  margin-right: 1rem;
+  transition: var(--transition);
+}
+.links a:hover svg {
+  color: var(--primary-regular);
+}

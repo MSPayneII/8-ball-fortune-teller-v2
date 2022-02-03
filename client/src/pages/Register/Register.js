@@ -88,7 +88,7 @@ const Register = () => {
           handleChange={handleChange}
         />
         <button className="btn btn-full registration-btn" disabled={isLoading}>
-          {isLoading ? "Processing..." : "Submit"}
+          Submit
         </button>
         <p className="registration-text">
           {userValues.isMember ? "Not a member?" : "Already a member?"}

@@ -1,0 +1,18 @@
+.nav-logo {
+  width: 14rem;
+  margin: 0.5rem 0 2rem 2rem;
+}
+
+.largeNav-container {
+  display: none;
+}
+
+@media (min-width: 62rem) {
+  .largeNav-container {
+    display: inline-block;
+    height: 100vh;
+    background-color: var(--white);
+    width: 30vw;
+    box-shadow: var(--shadow-largeNav);
+  }
+}

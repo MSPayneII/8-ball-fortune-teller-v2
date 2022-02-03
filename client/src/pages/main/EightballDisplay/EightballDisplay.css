@@ -1,0 +1,41 @@
+.eightball-display {
+  margin: 1rem auto;
+}
+
+.user-question-container {
+  display: flex;
+  justify-content: center;
+}
+
+.user-question-input-label {
+  display: none;
+}
+
+.user-input {
+  width: 18rem;
+  background-color: var(--white);
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  height: 3rem;
+}
+
+.user-question-btn {
+  height: 3rem;
+  width: 13vw;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  margin-top: 0.5rem;
+}
+
+.submit-question-icon {
+  font-size: 1.8rem;
+}
+
+@media (min-width: 62rem) {
+  .user-input {
+    width: 35vw;
+  }
+  .user-question-btn {
+    width: 10vw;
+  }
+}

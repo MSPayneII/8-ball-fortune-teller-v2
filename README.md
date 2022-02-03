@@ -5,13 +5,11 @@
 - [Overview](#overview)
 
   - [V1 Links](#v1-links)
-  - [V2Project Goal](#project-goal)
+  - [Project Goal](#project-goal)
   - [Reasons for choosing this project](#reasons-for-choosing-this-project)
   - [MVP](#build-features)
   - [Version 2 New Editions](#v2-new-editions)
   - [Technologies Used](#technologies-used)
-  - [What I Am Proud Of](#what-i-am-proud-of)
-  - [Continued development](#continued-development)
   - [Data Model](#data-model)
 
 - [Author](#author)
@@ -38,36 +36,45 @@ Improve upon version 1 of the 8-Ball Fortune Teller application (my Foundation C
 - Users can login/create an account
 - Users can ask the eightball questions
 - Users receive a randomly generated answer on the eightball
-- Question and answers pairs are displayed in a user's record (maybe a dashboard format)
+- Question and answers pairs are displayed in a user's record
+- Users can logout of their session
+
+#### In progress
+
+- Users can delete their account
 - Users can clear records collectively or individually depending on their preference
 - Users can update their profile with an avatar photo
-- Users can receive horoscope information for various signs in daily, weekly, monthly format. This feature will use a horoscope API
-- Users can delete their account
 
 ### V2 New Editions
 
-- Responsive design (mobile, tablet, desktop)
-- Horoscope Information via API data
+- Responsive design
 - Separate Pages (w/react router dom)
   - Landing
   - User login/register (user authentication included)
-  - User question/ eightball display
-  - Horoscope display page that pulls in horoscope API data based on the user's birth sign or user input
+  - User question/eightball display
   - User profile with dashboard
 - Better page navigation
 - Sidebar with links and displays various pages
   - Purpose: reduce unnecessary scrolling
 - Database Connection
-  - PostgresSQL
+  - MongoDB
 - Backend
   - Node/express
 - React Hooks
-  - useState, useEffect, useContext, maybe useReducer
-- React propTypes
+  - useState, useEffect, useContext, useReducer
+
+### Technologies Used
+
+- React
+- Node/Express
+- Axios
+- MongoDB
 
 ### Data Model
 
 ![screenshot](screenshot.png)
+![answersScreenshot](EbanswersSchema.png)
+![usersScreenshot](usersSchema.png)
 
 ### Author
 

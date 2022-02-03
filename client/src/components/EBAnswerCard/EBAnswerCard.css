@@ -1,0 +1,44 @@
+.answer-card {
+  position: absolute;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  color: #fff;
+  text-transform: capitalize;
+  border-radius: 0.25rem;
+  background: #5762e0;
+  clip-path: polygon(51% 100%, 0 0, 100% 0);
+  width: 23vmin;
+  height: 20vmin;
+  padding: 1rem;
+  margin-top: 1rem;
+  opacity: 0;
+}
+
+.answer-card-text {
+  font-size: var(--body2Font);
+  text-align: center;
+  margin-top: -0.3rem;
+  max-width: 4rem;
+  line-height: 1.6;
+}
+
+@media (min-width: 40em) {
+  .answer-card {
+    width: 20vmin;
+    height: 17vmin;
+  }
+
+  .answer-card-text {
+    font-size: var(--body1Font);
+    max-width: 6rem;
+    line-height: 1.6;
+  }
+}
+
+.fade-in {
+  transition-delay: 3.5s;
+  transition-duration: 2.5s;
+  transition-timing-function: linear;
+  opacity: 1;
+}

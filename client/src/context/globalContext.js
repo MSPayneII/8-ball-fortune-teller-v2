@@ -13,9 +13,15 @@ const initialState = {
   alertType: "",
   user: user ? JSON.parse(user) : null,
   token: token,
+  isQuestionAsked: false,
+  fortune: "",
+  isMobileNavOpen: false,
+  isDeleteModalOpen: false,
+  qAndAPairings: [],
 };
 
 const baseURL = "http://localhost:5001/api/auth";
+const fortuneURL = "http://localhost:5001/api/answer";
 
 const GlobalContext = React.createContext();
 
@@ -33,9 +39,25 @@ const GlobalProvider = ({ children }) => {
     }, 4000);
   };
 
+  const toggleMobileNav = () => {
+    dispatch({ type: "TOGGLE_MOBILE_NAV" });
+  };
+  const toggleDeleteModal = () => {
+    dispatch({ type: "TOGGLE_DELETE_MODAL" });
+  };
+
   const logOutUser = () => {
     dispatch({ type: "LOGOUT_USER" });
     removeUserLocalStorage();
+  };
+
+  const resetIsQuestionAsked = () => {
+    dispatch({ type: "ANSWER_RECEIVED" });
+  };
+
+  const deleteUserForGood = () => {
+    // dispatch({ type: "DELETE_USER_PASS" });
+    // removeUserLocalStorage();
   };
 
   const addUserLocalStorage = ({ user, token }) => {
@@ -90,6 +112,107 @@ const GlobalProvider = ({ children }) => {
     clearAlert(); //removes the alert message from the login/register page after 4 seconds (see line 26)
   };
 
+  const updateUser = async (currentUser) => {
+    try {
+      const response = await axios.patch(`${baseURL}/updateUser`, currentUser, {
+        headers: {
+          Authorization: `Bearer ${state.token}`,
+        },
+      });
+      const { user, token } = response.data;
+      // console.log(user);
+      dispatch({ type: "UPDATE_USER_PASS", payload: { user, token } });
+      addUserLocalStorage({ user, token });
+    } catch (error) {
+      console.log(error);
+
+      //place for UPDATE_USER_FAIL dispatch function
+    }
+    clearAlert(); //removes the alert message from the login/register page after 4 seconds (see line 26)
+  };
+
+  const deleteUser = async (currentUser) => {
+    // console.log(currentUser);
+    // try {
+    //   const response = await axios.delete(
+    //     `${baseURL}/deleteUser`,
+    //     currentUser,
+    //     {
+    //       headers: {
+    //         Authorization: `Bearer ${state.token}`,
+    //       },
+    //     }
+    //   );
+    //   const { user, token } = response.data;
+    //   console.log(user, token);
+    // } catch (error) {
+    //   console.log(error);
+    //   //place for UPDATE_USER_FAIL dispatch function
+    // }
+  };
+
+  const getFortune = async (userQuestion, currentUser) => {
+    dispatch({ type: "ASK_QUESTION_START" });
+    try {
+      const response = await axios.get(`${fortuneURL}/randomFortune`);
+      let fortune = response.data;
+
+      // console.log(fortune);
+      dispatch({ type: "FORTUNE_RETRIEVAL", payload: fortune });
+
+      setTimeout(() => {
+        const bodyObj = {
+          question: userQuestion,
+          answer: fortune,
+          currentUser,
+        };
+
+        createQAPair(bodyObj);
+      }, 10000);
+    } catch (error) {
+      console.log(error.response);
+    }
+  };
+
+  const createQAPair = async (bodyObj) => {
+    try {
+      const response = await axios.post(`${fortuneURL}/createQAPair`, bodyObj, {
+        headers: {
+          Authorization: `Bearer ${state.token}`,
+        },
+      });
+      // console.log("coming from createQAPair:", response.data);
+      let pairs = await response.data;
+      console.log(pairs);
+      dispatch({ type: "Q&A_PAIRS_SUCCESS", payload: pairs });
+    } catch (error) {
+      console.log(error.response);
+    }
+  };
+
+  // TBD
+  const getQAPairs = async (currentUser) => {
+    try {
+      const response = await axios.get(
+        `${fortuneURL}/getQAPairs`,
+        currentUser,
+        {
+          headers: {
+            Authorization: `Bearer ${state.token}`,
+          },
+        }
+      );
+      // let pairs = response.data;
+      console.log(response);
+      // console.log(pairs);
+
+      // // console.log(qaPairs);
+      // dispatch({ type: "Q&A_PAIRS_SUCCESS", payload: pairs });
+    } catch (error) {
+      console.log(error.response);
+    }
+  };
+
   return (
     <GlobalContext.Provider
       value={{
@@ -97,7 +220,16 @@ const GlobalProvider = ({ children }) => {
         displayAlert,
         registerUser,
         loginUser,
+        deleteUser,
+        deleteUserForGood,
+        updateUser,
         logOutUser,
+        toggleMobileNav,
+        toggleDeleteModal,
+        getFortune,
+        createQAPair,
+        getQAPairs,
+        resetIsQuestionAsked,
       }}
     >
       {children}
