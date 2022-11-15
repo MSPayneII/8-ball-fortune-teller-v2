@@ -6,6 +6,7 @@ import {
   Route,
   Outlet,
   Navigate,
+  Link,
 } from "react-router-dom";
 import { useGlobalContext } from "./context/globalContext";
 
