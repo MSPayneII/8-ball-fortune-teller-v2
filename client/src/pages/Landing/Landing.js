@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Logo } from "../../components";
+
 import landingimage from "../../assets/images/customlandingpage.svg";
 import "./Landing.css";
 
 const Landing = () => {
   return (
     <main className="container">
-      <nav>{/* <Logo className="logo" /> */}</nav>
+      <nav></nav>
 
       <div className="container page">
         <div className="details">

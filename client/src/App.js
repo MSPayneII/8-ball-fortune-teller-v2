@@ -1,13 +1,6 @@
 import { Register, Landing, Error } from "./pages";
 import { Combined, Eightball, SavedResponses, UserProfile } from "./pages/main";
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-  Outlet,
-  Navigate,
-  Link,
-} from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { useGlobalContext } from "./context/globalContext";
 
 function App() {

@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { useGlobalContext } from "../../context/globalContext";
 import { FaAngleDown } from "react-icons/fa";
 import { FiMenu } from "react-icons/fi";
-import { Logo } from "../../components";
+
 import mobileLogo from "../../assets/images/mobile-logo.svg";
-import { links } from "../../utils/mainLinks";
+
 import { MobileNav } from "../../components";
 
 import "./Header.css";

@@ -1,6 +1,6 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import { useGlobalContext } from "../../../context/globalContext";
+
 import { Header, LargeNav } from "../../../components";
 import "./Combined.css";
 

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useGlobalContext } from "../../context/globalContext";
 import { FaTimes } from "react-icons/fa";
 import { NavLinks } from "../../components";
